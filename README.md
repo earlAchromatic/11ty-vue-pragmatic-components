@@ -1,4 +1,4 @@
-# Pragmatic Vue Components 🔌
+# Pragmatic Vue Components 
 
 ## Use Vue Components to author HTML/nunjucks/liquid layouts in 11ty SSG
 
