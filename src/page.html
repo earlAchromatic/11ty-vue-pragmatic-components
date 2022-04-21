@@ -1,8 +1,13 @@
+---
+Header: 'Just in Time for Blast off'
+prop: '125'
+---
+
 <myFooter>
   <template v-slot:title>
     <div>
       <p>Some text here</p>
-      <h2>Some title here</h2>
+      <myHeader :prop="{{prop}}">{{Header}}</myHeader>
     </div>
   </template>
 
