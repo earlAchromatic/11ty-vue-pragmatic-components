@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
-const path = require('path');
+import { fileURLToPath, URL } from 'url';
 
 export default defineConfig({
   plugins: [vue()],
@@ -10,7 +10,7 @@ export default defineConfig({
     middlewareMode: 'ssr',
   },
   resolve: {
-    '@': path.resolve(__dirname, './node_modules'),
+    '@': fileURLToPath(new URL('../node_modules/', import.meta.url)),
   },
   build: {
     mode: 'production',
