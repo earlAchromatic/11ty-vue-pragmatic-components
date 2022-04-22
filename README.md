@@ -44,4 +44,4 @@ no custom elements required
 - automatic component registration based on whats in the `components` folder
 - automatic node modules aliasing in vite config
 - proper 11ty plugin format in an `.eleventy.js`
--
+
