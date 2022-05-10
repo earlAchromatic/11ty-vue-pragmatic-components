@@ -9,6 +9,7 @@ const fs = require('fs');
 const componentRegistry = {
   myHeader: '../components/myHeader.vue',
   myFooter: '../components/myFooter.vue',
+  Loading: '../components/Loading.vue'
 };
 
 module.exports = function (eleventyConfig) {
