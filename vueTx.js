@@ -7,8 +7,8 @@ eleventyConfig.addTransform(
 
     function tryComponents() {
       for (const [key, value] of Object.entries(componentRegistry)) {
-        let registeredComponent = key;
-        let registeredComponentPath = value;
+        let registeredComponent = value;
+        let registeredComponentPath = key;
         console.log(key);
         let comp = doc.querySelector(registeredComponent);
         console.log(comp);
