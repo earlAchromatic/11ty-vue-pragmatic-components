@@ -17,15 +17,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('node_modules');
 
   eleventyConfig.on(
-    'eleventy.after',
+    'eleventy.before',
     async ({ dir, results, runMode, outputMode }) => {
       // Read more below
       console.log(results[0].content);
-      results.forEach((result) => {
-        if (result.content) {
-          console.log(`writing to ${result.outputPath}`);
-          fs.writeFileSync(result.outputPath, transformContent(result.content));
-        }
+      
       });
     }
   );
@@ -52,13 +48,13 @@ function tryComponents(doc) {
     let registeredComponent = key;
     let registeredComponentPath = value;
     console.log(`${registeredComponent} at ${registeredComponentPath}`);
-    let comp = doc.querySelector(registeredComponent);
+    let comp = doc.querySelector(unregisteredComponent);
 
     if (!comp) {
       continue;
     }
 
-    let childTemplate = comp.innerHTML;
+    let childTemplate = comp.outerHtml;
 
     //let props = Object.values(comp.attributes);
 
