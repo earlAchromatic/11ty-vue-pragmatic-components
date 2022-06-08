@@ -13,13 +13,7 @@ const componentRegistry = {
 };
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy({ public: '/' });
-  // eleventyConfig.addPassthroughCopy('components');
-
-  eleventyConfig.addPassthroughCopy('node_modules');
-
-  eleventyConfig.on(
-    'eleventy.after',
+  eleventyConfig.addPassthroughCopy({ public: '/' }); eleventyConfig.addPassthroughCopy('components');eleventyConfig.addPassthroughCopy('node_modules');eleventyConfig.on('eleventy.after',
     async ({ dir, results, runMode, outputMode }) => {
       // Read more below
       console.log(results[0].content);
