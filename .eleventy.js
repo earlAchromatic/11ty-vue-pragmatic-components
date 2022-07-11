@@ -7,25 +7,7 @@ const util = require('util');
 const fs = require('fs');
 
 const componentRegistry = {
-  myHeader: '../components/myHeader.vue',
-  myFooter: '../components/myFooter.vue',
-};
-
-module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy({ public: '/' });
-  eleventyConfig.addPassthroughCopy('components');
-  eleventyConfig.addPassthroughCopy('node_modules');
-
-  eleventyConfig.on(
-    'eleventy.after',
-    async ({ dir, results, runMode, outputMode }) => {
-      // Read more below
-      console.log(results[0].content);
-      results.forEach((result) => {
-        if (result.content) {
-          console.log(`writing to ${result.outputPath}`);
-          fs.writeFileSync(result.outputPath, transformContent(result.content));
-        }
+  myHeader
       });
     }
   );
@@ -49,10 +31,7 @@ function transformContent(content) {
   tryComponents(doc);
 
   return dom.serialize();
-}
-
-function tryComponents(doc) {
-  for (const [key, value] of Object.entries(componentRegistry)) {
+}ntries(componentRegistry)) {
     let registeredComponent = key;
     let registeredComponentPath = value;
     console.log(`${registeredComponent} at ${registeredComponentPath}`);
@@ -73,10 +52,12 @@ function tryComponents(doc) {
 
     let VueWrapper = `
 <div id="${registeredComponent}"></div>
-<script type=module>
-import {createApp} from "../node_modules/vue/dist/vue.esm-bundler.js";
+<script type=m
+./node_modules/vue/dist/vue.esm-bundler.js";
 import ${registeredComponent} from "${registeredComponentPath}";
-
+ue.esm-bundler.js";
+import ${registeredComponent} froue.esm-bundler.js";
+import ${registeredComponent} fro
 createApp({
   data(){
 
