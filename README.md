@@ -39,8 +39,6 @@ no custom elements required
 
 - props seeker via attr
 - multiple component loop (for the .componetn() func)
-- recursive component recognition in child template (see above item, they are the same thing)
-- automatic component registration based on whats in the `components` folder
 - automatic node modules aliasing in vite config
 - updated feature
 - proper 11ty plugin format in an `.eleventy.js`

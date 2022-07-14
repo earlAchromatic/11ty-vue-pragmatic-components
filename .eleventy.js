@@ -3,8 +3,9 @@ const viteConfig = require('./vite.config.js');
 const jsdom = require('jsdom');
 
 const util = require('util');
+const util = require('futil');
 
-const fs = require('fs');
+
 
 const componentRegistry = {
   myHeader: '../components/myHeader.vue',
