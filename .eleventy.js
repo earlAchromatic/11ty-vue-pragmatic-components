@@ -1,7 +1,7 @@
 const EleventyVitePlugin = require('@11ty/eleventy-plugin-vite');
 const viteConfig = require('./vite.config.js');
 const jsdom = require('jsdom');
-const { JSDOM } = jsdom;
+
 const util = require('util');
 
 const fs = require('fs');
