@@ -18,16 +18,7 @@ module.exports = function (eleventyConfig) {
     async ({ dir, results, runMode, outputMode }) => {
       // Read more below
       console.log(results[0].content);
-      
-      });
-    }
-  );
-
-  eleventyConfig.addPlugin(EleventyVitePlugin, {
-    tempFolderName: '.11ty-vite', // Default name of the temp folder
-    viteOptions: viteConfig,
-  });
-
+    
   return {
     dir: {
       input: 'src',

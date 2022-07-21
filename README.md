@@ -40,6 +40,5 @@ no custom elements required
 - props seeker via attr
 - multiple component loop (for the .componetn() func)
 - automatic node modules aliasing in vite config
-- updated feature
 - proper 11ty plugin format in an `.eleventy.js`
 

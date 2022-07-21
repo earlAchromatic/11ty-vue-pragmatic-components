@@ -22,7 +22,6 @@ eleventyConfig.addTransform(
 
         let VueWrapper = `
       <div id="${registeredComponent}">
-      <script type=module>
       import {createApp} from "./node_modules/vue";
       import ${registeredComponent} from "${registeredComponentPath}";
       createApp({
