@@ -1,4 +1,4 @@
-# Pragmatic Vue Components 🔌
+# Pragmatic Vue Components 
 
 ## Use Vue Components to author HTML/nunjucks/liquid layouts in 11ty SSG
 
@@ -38,10 +38,7 @@ no custom elements required
 ## Feature list to build
 
 - props seeker via attr
-- 11ty data props builder/helper functions (see nunjucks loops to build data object in jacobmilhorn.com proj)
 - multiple component loop (for the .componetn() func)
-- recursive component recognition in child template (see above item, they are the same thing)
-- automatic component registration based on whats in the `components` folder
 - automatic node modules aliasing in vite config
 - proper 11ty plugin format in an `.eleventy.js`
--
+
