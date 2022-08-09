@@ -9,13 +9,13 @@ const util = require('futil');
 
 const componentRegistry = {
   myHeader: '../components/myHeader.vue',
-  myFooter: '../components/myFooter.vue',
+  myFooter: '../componentx/myFoot.vue',
   Loading: '../components/Loading.vue'
 };
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ public: '/' }); eleventyConfig.addPassthroughCopy('components');eleventyConfig.addPassthroughCopy('node_modules');eleventyConfig.on('eleventy.after',
-    async ({ dir, results, runMode, outputMode }) => {
+    async ({ dir, results }) => {
       // Read more below
       console.log(results[0].content);
     

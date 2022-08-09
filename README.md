@@ -4,7 +4,7 @@
 
 I have wanted to use Vue components directly in my markup for a while. This is easily done by exporting Vue Components as Native Web Components (.ce.vue) but then you deal with other issues... some of these are dealt with in lit's 11ty plugin setup..
 
-I like the idea of just writing the components in and having an 11ty plugin add the vue scripts as necessary. Some of these can get prerendered and not hydrated, some can get hydrated and you can just use async components and determine rules for when the component is fetched.
+I like the idea of just writing the components in and having an 11ty plugin add the vue scripts as necessary. Some of these can get prerendered and not hydrated, some can get hydrated and you can just use
 
 Now, we have a fully capable partial hydration setup and Fully functional vue components in SFC format that I can simply write as if they were HTML while I am composing layouts and pages.
 
@@ -21,7 +21,6 @@ have to register components manually (how can I automate this)
 Pros:
 
 its a vue only solution
-it is lighter weight than slinkity, simpler too
 focuses on 1 framework
 focuses on authorability (no shortcodes)
 no shortcodes necessary for slotting
