@@ -24,16 +24,8 @@ module.exports = function (eleventyConfig) {
       input: 'src',
     },
   };
-};
-
-function transformContent(content) {
-  let dom = new JSDOM(content);
-  let doc = dom.window.document;
-
-  tryComponents(doc);
-
-  return dom.serialize();
 }
+
 
 function tryComponents(doc) {
   for (const [key, value] of Object.entries(componentRegistry)) {
