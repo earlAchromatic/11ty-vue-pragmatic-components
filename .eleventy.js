@@ -14,8 +14,12 @@ const componentRegistry = {
 };
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy({ public: '/' }); eleventyConfig.addPassthroughCopy('components');eleventyConfig.addPassthroughCopy('node_modules');eleventyConfig.on('eleventy.after',
-    async ({ dir, results }) => {
+  eleventyConfig.addPassthroughCopy({ public: '/' });
+  eleventyConfig.on(
+    'eleventy.after',
+    async ({ dir, results, runMode, outputMode }) => {
+
+
       // Read more below
       console.log(results[0].content);
     
@@ -24,16 +28,8 @@ module.exports = function (eleventyConfig) {
       input: 'src',
     },
   };
-};
-
-function transformContent(content) {
-  let dom = new JSDOM(content);
-  let doc = dom.window.document;
-
-  tryComponents(doc);
-
-  return dom.serialize();
 }
+
 
 function tryComponents(doc) {
   for (const [key, value] of Object.entries(componentRegistry)) {
