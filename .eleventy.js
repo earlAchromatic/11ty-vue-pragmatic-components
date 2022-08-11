@@ -13,7 +13,6 @@ const componentRegistry = {
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ public: '/' });
-  eleventyConfig.addPassthroughCopy('components');
   eleventyConfig.addPassthroughCopy('node_modules');
 
   eleventyConfig.on(
