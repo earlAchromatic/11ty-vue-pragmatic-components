@@ -9,7 +9,6 @@ const util = require('futil');
 
 const componentRegistry = {
   myHeader: '../components/myHeader.vue',
-  myFooter: '../componentx/myFoot.vue',
   Loading: '../components/Loading.vue'
 };
 
