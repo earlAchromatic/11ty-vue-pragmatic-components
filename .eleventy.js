@@ -29,17 +29,6 @@ module.exports = function (eleventyConfig) {
     }
   );
 
-  eleventyConfig.addPlugin(EleventyVitePlugin, {
-    tempFolderName: '.11ty-vite', // Default name of the temp folder
-  });
-};
-
-function transformContent(content) {
-  let doc = dom.window.document;
-
-  tryComponents(doc);
-}
-
 function tryComponents(doc) {
   for (const [key, value] of Object.entries(componentRegistry)) {
     let registeredComponent = key;
