@@ -38,8 +38,6 @@ function transformContent(content) {
   let doc = dom.window.document;
 
   tryComponents(doc);
-
-  return dom.serialize();
 }
 
 function tryComponents(doc) {
