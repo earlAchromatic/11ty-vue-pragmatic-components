@@ -30,9 +30,6 @@ module.exports = function (eleventyConfig) {
     }
   );
 
-  eleventyConfig.addPlugin(EleventyVitePlugin, {
-    tempFolderName: '.11ty-vite', // Default name of the temp folder
-  });
 };
 
 function transformContent(content) {
