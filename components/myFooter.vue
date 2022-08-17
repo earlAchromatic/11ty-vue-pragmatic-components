@@ -1,10 +1,10 @@
 <template>
   <footer>
     <a href="/">
-      <slot name="title"> </slot>
+      <slot name="option"> </slot>
     </a>
     <b>
-      <slot name="option"> </slot>
+      <slot name="title"> </slot>
     </b>
   </footer>
 </template>
