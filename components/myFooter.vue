@@ -4,7 +4,7 @@
       <slot name="title"> </slot>
     </a>
     <b>
-      <slot name="option"> </slot>
+      <slot name="none"> </slot>
     </b>
   </footer>
 </template>
