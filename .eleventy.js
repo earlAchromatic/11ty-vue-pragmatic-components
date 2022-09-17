@@ -81,7 +81,7 @@ createApp({
 <\/script>
 `;
     let el = doc.createElement('div');
-    el.setAttribute('injectionPoint', true);
+    el.setAttribute('injectPoint', true);
     el.innerHTML = VueWrapper;
     comp.replaceWith(el);
   }

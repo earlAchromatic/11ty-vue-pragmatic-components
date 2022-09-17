@@ -1,9 +1,9 @@
 <template>
-  <h1 @click="clicked">IM A VUE COMPONENT</h1>
-  <button @click="clicked">click</button>
+  <h1 @click="clicked">IM A RAD VUE COMPONENT</h1>
+  <button @click="clicked">click Here to visit</button>
   <slot></slot>
   <div v-show="clicker">
-    <AsyncComp> World </AsyncComp>
+    <AsyncComp> World Away </AsyncComp>
   </div>
 </template>
 
