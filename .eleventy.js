@@ -8,7 +8,6 @@ const fs = require('fs');
 
 const componentRegistry = {
   myHeader: '../components/myHeader.vue',
-  myFooter: '../components/myFooter.vue',
 };
 
 module.exports = function (eleventyConfig) {
@@ -41,9 +40,6 @@ module.exports = function (eleventyConfig) {
 function transformContent(content) {
   let dom = new JSDOM(content);
   let doc = dom.window.document;
-
-  tryComponents(doc);
-
   return dom.serialize();
 }
 
