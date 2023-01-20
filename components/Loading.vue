@@ -1,3 +1,3 @@
 <template>
-  <div>:(x)</div>
+  <div>:)</div>
 </template>

@@ -17,14 +17,14 @@ const AsyncComp = defineAsyncComponent({
     return new Promise((resolve) => {
       setTimeout(() => {
         resolve(import('./SlottedComp.vue'));
-      }, 5000);
+      }, 2000);
     });
   },
   loadingComponent: Loading,
-  delay: 400,
+  delay: 100,
 });
 
-const clicker = ref(true);
+const clicker = ref(false);
 
 const clicked = () => {
   clicker.value = true;
