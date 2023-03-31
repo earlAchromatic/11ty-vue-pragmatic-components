@@ -40,9 +40,6 @@ module.exports = function (eleventyConfig) {
 
 function transformContent(content) {
   let dom = new JSDOM(content);
-  let doc = dom.window.document;
-
-  tryComponents(doc);
 
   return dom.serialize();
 }
