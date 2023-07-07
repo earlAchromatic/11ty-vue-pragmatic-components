@@ -33,33 +33,3 @@ module.exports = function (eleventyConfig) {
     viteOptions: viteConfig,
   });
 };
-
-function transformContent(content) {
-  let dom = new JSDOM(content);
-  let doc = dom.window.document;
-
-  tryComponents(doc);
-
-  return dom.serialize();
-}
-
-function tryComponents(doc) {
-  for (const [key, value] of Object.entries(componentRegistry)) {
-    let registeredComponent = key;
-    let registeredComponentPath = value;
-    console.log(`${registeredComponent} at ${registeredComponentPath}`);
-    let comp = doc.querySelector(unregisteredComponent);
-
-    if (!comp) {
-      continue;
-    }
-
-    let childTemplate = comp.outerHtml;
-
-    //let props = Object.values(comp.attributes);
-    let el = doc.createElement('div');
-    el.setAttribute('injectionPoint', true);
-    el.innerHTML = VueWrapper;
-    comp.replaceWith(el);
-  }
-}
