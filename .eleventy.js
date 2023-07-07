@@ -57,25 +57,6 @@ function tryComponents(doc) {
     let childTemplate = comp.outerHtml;
 
     //let props = Object.values(comp.attributes);
-
-    let VueWrapper = `
-<div id="${registeredComponent}"></div>
-<script type=module>
-import {createApp} from "../node_modules/vue/dist/vue.esm-bundler.js";
-import ${registeredComponent} from "${registeredComponentPath}";
-
-createApp({
-  data(){
-
-  },
-  template: \`
-  <${registeredComponent}>
-  ${childTemplate}
-  </${registeredComponent}>
-  \`
-}).component('${registeredComponent}',${registeredComponent}).mount('#${registeredComponent}')
-<\/script>
-`;
     let el = doc.createElement('div');
     el.setAttribute('injectionPoint', true);
     el.innerHTML = VueWrapper;
