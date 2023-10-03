@@ -3,7 +3,7 @@
   <button @click="clicked">click</button>
   <slot></slot>
   <div v-show="clicker">
-    <AsyncComp> World </AsyncComp>
+    <AsyncComp> Word </AsyncComp>
   </div>
 </template>
 
