@@ -1,4 +1,4 @@
 <template>
-  <h2>Slot</h2>
-  <slot></slot>
+  <h2>Slot here</h2>
+  <slot>steady</slot>
 </template>
