@@ -3,7 +3,7 @@ const viteConfig = require('./vite.config.js');
 const jsdom = require('jsdom');
 const { JSDOM } = jsdom;
 const util = require('util');
-const { default: vuePlugin } = require('@vitejs/plugin-vue');
+
 const fs = require('fs');
 
 const componentRegistry = {
@@ -13,7 +13,8 @@ const componentRegistry = {
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ public: '/' });
-  eleventyConfig.addPassthroughCopy('components');
+  // eleventyConfig.addPassthroughCopy('components');
+
   eleventyConfig.addPassthroughCopy('node_modules');
 
   eleventyConfig.on(
@@ -21,21 +22,21 @@ module.exports = function (eleventyConfig) {
     async ({ dir, results, runMode, outputMode }) => {
       // Read more below
       console.log(results[0].content);
-      results.forEach((result) => {
-        if (result.content) {
-          console.log(`writing to ${result.outputPath}`);
-          fs.writeFileSync(result.outputPath, transformContent(result.content));
-        }
+      
       });
     }
   );
 
   eleventyConfig.addPlugin(EleventyVitePlugin, {
     tempFolderName: '.11ty-vite', // Default name of the temp folder
-
-    // Defaults are shown:
     viteOptions: viteConfig,
   });
+
+  return {
+    dir: {
+      input: 'src',
+    },
+  };
 };
 
 function transformContent(content) {
@@ -53,12 +54,17 @@ function tryComponents(doc) {
     let registeredComponentPath = value;
     console.log(`${registeredComponent} at ${registeredComponentPath}`);
     let comp = doc.querySelector(registeredComponent);
-
     if (!comp) {
       continue;
     }
 
     let childTemplate = comp.innerHTML;
+
+    let componentString = '';
+
+    let tempComponentReg = [];
+
+    //check comp recursively against component registry
 
     //let props = Object.values(comp.attributes);
 
