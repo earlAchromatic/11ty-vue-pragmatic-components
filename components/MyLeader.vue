@@ -1,7 +1,7 @@
 <template>
   <nav>
     <a href="/index">
-      <slot > </slot>
+      <slot/>
     </a>
   </nav>
 </template>
