@@ -17,7 +17,7 @@ const AsyncComp = defineAsyncComponent({
     return new Promise((resolve) => {
       setTimeout(() => {
         resolve(import('./SlottedComp.vue'));
-      }, 4000);
+      }, 2000);
     });
   },
   loadingComponent: Loading,

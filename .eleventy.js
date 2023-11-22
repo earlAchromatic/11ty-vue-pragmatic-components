@@ -13,6 +13,7 @@ const componentRegistry = {
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ public: '/' });
+  eleventyConfig.addPassthroughCopy('components');
   eleventyConfig.addPassthroughCopy('node_modules');
 
   eleventyConfig.on(
@@ -28,6 +29,23 @@ module.exports = function (eleventyConfig) {
       });
     }
   );
+
+  eleventyConfig.addPlugin(EleventyVitePlugin, {
+    tempFolderName: '.11ty-vite', // Default name of the temp folder
+
+    // Defaults are shown:
+    viteOptions: viteConfig,
+  });
+};
+
+function transformContent(content) {
+  let dom = new JSDOM(content);
+  let doc = dom.window.document;
+
+  tryComponents(doc);
+
+  return dom.serialize();
+}
 
 function tryComponents(doc) {
   for (const [key, value] of Object.entries(componentRegistry)) {
