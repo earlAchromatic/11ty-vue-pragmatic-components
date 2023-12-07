@@ -3,7 +3,7 @@
   <button @click="clicked">click</button>
   <slot></slot>
   <div v-show="clicker">
-    <AsyncComp> World </AsyncComp>
+    <AsyncComp> Async Component here </AsyncComp>
   </div>
 </template>
 
@@ -17,7 +17,7 @@ const AsyncComp = defineAsyncComponent({
     return new Promise((resolve) => {
       setTimeout(() => {
         resolve(import('./SlottedComp.vue'));
-      }, 4000);
+      }, 6000);
     });
   },
   loadingComponent: Loading,

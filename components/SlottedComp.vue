@@ -1,4 +1,3 @@
 <template>
-  <h2>Slot</h2>
-  <slot></slot>
+  <h2>No Slot here</h2>
 </template>
