@@ -21,7 +21,6 @@ have to register components manually (how can I automate this)
 Pros:
 
 its a vue only solution
-it is lighter weight than slinkity, simpler too
 focuses on 1 framework
 focuses on authorability (no shortcodes)
 no shortcodes necessary for slotting
