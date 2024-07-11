@@ -6,9 +6,6 @@ I have wanted to use Vue components directly in my markup for a while. This is e
 
 I like the idea of just writing the components in and having an 11ty plugin add the vue scripts as necessary. Some of these can get prerendered and not hydrated, some can get hydrated and you can just use async components and determine rules for when the component is fetched.
 
-Now, we have a fully capable partial hydration setup and Fully functional vue components in SFC format that I can simply write as if they were HTML while I am composing layouts and pages.
-
-The best part is, I can use slotting to write embedded markup inside components. I can even use other components inside my components just by adding the Vue elements.
 
 ---
 
@@ -41,7 +38,7 @@ no custom elements required
 - 11ty data props builder/helper functions (see nunjucks loops to build data object in jacobmilhorn.com proj)
 - multiple component loop (for the .componetn() func)
 - recursive component recognition in child template (see above item, they are the same thing)
-- automatic component registration based on whats in the `components` folder
-- automatic node modules aliasing in vite config
-- proper 11ty plugin format in an `.eleventy.js`
+
+
+I like the idea of just writing the components in and having an 11ty plugin add the vue scripts as necessary. Some of these can get prerendered and not hydrated, some can get hydrated and you can just use async components and determine rules for when the component is fetched.
 
