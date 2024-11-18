@@ -30,11 +30,10 @@ module.exports = function (eleventyConfig) {
   );
 
 function tryComponents(doc) {
-  for (const [key, value] of Object.entries(componentRegistry)) {
-    let registeredComponent = key;
-    let registeredComponentPath = value;
-    console.log(`${registeredComponent} at ${registeredComponentPath}`);
-    let comp = doc.querySelector(registeredComponent);
+  for (const [key, value] of Object.entries({key, value})) {
+
+    console.log(`${key} at ${value}`);
+    let comp = doc.querySelector(key);
 
     if (!comp) {
       continue;
@@ -45,21 +44,21 @@ function tryComponents(doc) {
     //let props = Object.values(comp.attributes);
 
     let VueWrapper = `
-<div id="${registeredComponent}"></div>
+<div id="${key}"></div>
 <script type=module>
 import {createApp} from "../node_modules/vue/dist/vue.esm-bundler.js";
-import ${registeredComponent} from "${registeredComponentPath}";
+import ${key} from "${value}";
 
 createApp({
   data(){
 
   },
   template: \`
-  <${registeredComponent}>
+  <${key}>
   ${childTemplate}
-  </${registeredComponent}>
+  </${key}>
   \`
-}).component('${registeredComponent}',${registeredComponent}).mount('#${registeredComponent}')
+}).component('${key}',${key}).mount('#${key}')
 <\/script>
 `;
     let el = doc.createElement('div');
