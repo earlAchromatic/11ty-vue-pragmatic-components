@@ -18,8 +18,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.on(
     'eleventy.after',
     async ({ dir, results, runMode, outputMode }) => {
-      // Read more below
-      console.log(results[0].content);
       results.forEach((result) => {
         if (result.content) {
           console.log(`writing to ${result.outputPath}`);
@@ -33,17 +31,11 @@ function tryComponents(doc) {
   for (const [key, value] of Object.entries(componentRegistry)) {
     let registeredComponent = key;
     let registeredComponentPath = value;
-    console.log(`${registeredComponent} at ${registeredComponentPath}`);
     let comp = doc.querySelector(registeredComponent);
 
-    if (!comp) {
-      continue;
-    }
+    if (!comp) continue;
 
     let childTemplate = comp.innerHTML;
-
-    //let props = Object.values(comp.attributes);
-
     let VueWrapper = `
 <div id="${registeredComponent}"></div>
 <script type=module>
