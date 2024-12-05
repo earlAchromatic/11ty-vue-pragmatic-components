@@ -13,14 +13,12 @@ const componentRegistry = {
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ public: '/' });
-  eleventyConfig.addPassthroughCopy('node_modules');
 
   eleventyConfig.on(
     'eleventy.after',
     async ({ dir, results, runMode, outputMode }) => {
       results.forEach((result) => {
         if (result.content) {
-          console.log(`writing to ${result.outputPath}`);
           fs.writeFileSync(result.outputPath, transformContent(result.content));
         }
       });
@@ -40,7 +38,6 @@ function tryComponents(doc) {
 <div id="${registeredComponent}"></div>
 <script type=module>
 import {createApp} from "../node_modules/vue/dist/vue.esm-bundler.js";
-import ${registeredComponent} from "${registeredComponentPath}";
 
 createApp({
   data(){
@@ -56,7 +53,5 @@ createApp({
 `;
     let el = doc.createElement('div');
     el.setAttribute('injectionPoint', true);
-    el.innerHTML = VueWrapper;
-    comp.replaceWith(el);
   }
 }
