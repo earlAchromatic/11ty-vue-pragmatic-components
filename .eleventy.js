@@ -3,7 +3,6 @@ const viteConfig = require('./vite.config.js');
 const jsdom = require('jsdom');
 const { JSDOM } = jsdom;
 const util = require('util');
-const { default: vuePlugin } = require('@vitejs/plugin-vue');
 const fs = require('fs');
 
 const componentRegistry = {
