@@ -3,13 +3,10 @@ eleventyConfig.addTransform(
   function (content, outputPath) {
     let dom = new JSDOM(content);
     let doc = dom.window.document;
-    //replace Header with
 
     function tryComponents() {
       for (const [key, value] of Object.entries(componentRegistry)) {
-        console.log(key);
         let comp = doc.querySelector(registeredComponent);
-        console.log(comp);
         if (!comp) {
           return;
         }
