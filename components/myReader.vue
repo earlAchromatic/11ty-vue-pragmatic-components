@@ -8,9 +8,6 @@
 </template>
 
 <script setup>
-import { ref } from '../node_modules/vue';
-import { defineAsyncComponent } from 'vue';
-import Loading from './Loading.vue';
 
 const AsyncComp = defineAsyncComponent({
   loader: () => {
