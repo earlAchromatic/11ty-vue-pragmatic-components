@@ -9,11 +9,4 @@ Now, we have a fully capable partial hydration setup and Fully functional vue co
 The best part is, I can use slotting to write embedded markup inside components. I can even use other components inside my components just by adding the Vue elements.
 
 ---
-
-Pros:
-
-its a vue only solutio
-## Feature list to build
-
-- props seeker via attrs` folder
-- automatic node modules aliasing in vite config
+s
