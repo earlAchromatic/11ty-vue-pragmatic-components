@@ -18,5 +18,5 @@ its a vue only solutio
 - props seeker via attr
 - multiple component loop (for the .componetn() func)
 - recursive component recognition in child template (see above item, they are the same thing)
-- automatic component registration based on whats in the `components` folder
+- automatic component registration based on whats in the ` folder
 - automatic node modules aliasing in vite config
