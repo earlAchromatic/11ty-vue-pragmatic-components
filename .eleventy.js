@@ -7,7 +7,6 @@ const fs = require('fs');
 
 const componentRegistry = {
   myHeader: '../components/myHeader.vue',
-  myFooter: '../components/myFooter.vue',
 };
 
 module.exports = function (eleventyConfig) {
@@ -23,6 +22,21 @@ module.exports = function (eleventyConfig) {
       });
     }
   );
+
+  eleventyConfig.addPlugin(EleventyVitePlugin, {
+    tempFolderName: '.11ty-vite', // Default name of the temp folder
+
+    // Defaults are shown:
+    viteOptions: viteConfig,
+  });
+};
+
+function transformContent(content) {
+  let dom = new JSDOM(content);
+  let doc = dom.window.document;
+  return dom.serialize();
+}
+
 
 function tryComponents(doc) {
   for (const [key, value] of Object.entries(componentRegistry)) {

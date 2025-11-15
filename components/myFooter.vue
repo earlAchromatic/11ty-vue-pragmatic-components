@@ -4,7 +4,8 @@
       <slot name="title"> </slot>
     </a>
     <b>
-      <slot name="option"> sadf </slot>
+      <p>b is this slot</p>
+      <slot name="option"> </slot>
     </b>
   </footer>
 </template>
