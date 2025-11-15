@@ -20,11 +20,7 @@ no shortcodes necessary for slotting
 
 slots first approach - deeply nested slots are easily accomplished. This is important for templating.
 props passing capable
-SSR + partial hydr ready
-simple script injection for render modes??? (separate plugin)
-Just an 11ty plugin, not a whole wrapper around 11ty.
-uses Vue async components for partial hydration on a per component's logic basis
-leverages official 11ty maintained plugins
+SSR + partial hydr readylugins
 no custom elements required
 
 ## Feature list to build
