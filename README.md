@@ -18,6 +18,14 @@ focuses on 1 framework
 focuses on authorability (no shortcodes)
 no shortcodes necessary for slotting
 
+Lorem ipsum dolor sit amet, arcanae confluunt, et mysteria occultantur in umbrarum regno. 
+Vivamus tempus ad infinitum, ubi animae divinorum sagacitate exoritur. 
+Aether et terra coniunguntur, resonantia harmonia aeternitatis.
+
+Quisque sacramentum inter stellas et elementa, arcanae scientiae veritas revelatur.
+Tempus non fugit, sed in mysticum orbem recurrit, fluens in aeternum. 
+Nam ordo in chaos absconditur, et in tenebris lucis semina germinant.
+
 slots first approach - deeply nested slots are easily accomplished. This is important for templating.
 props passing capable
 SSR + partial hydr ready
