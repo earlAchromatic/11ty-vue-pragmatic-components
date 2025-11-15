@@ -21,7 +21,6 @@ no shortcodes necessary for slotting
 slots first approach - deeply nested slots are easily accomplished. This is important for templating.
 props passing capable
 SSR + partial hydr readylugins
-no custom elements required
 
 ## Feature list to build
 
