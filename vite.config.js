@@ -7,7 +7,6 @@ export default defineConfig({
   clearScreen: false,
   server: {
     mode: 'development',
-    middlewareMode: 'ssr',
   },
   resolve: {
     '@': path.resolve(__dirname, './node_modules'),
