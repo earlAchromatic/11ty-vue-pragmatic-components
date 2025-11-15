@@ -12,16 +12,7 @@ The best part is, I can use slotting to write embedded markup inside components.
 
 Pros:
 
-its a vue only solution
-it is lighter weight than slinkity, simpler too
-focuses on 1 framework
-focuses on authorability (no shortcodes)
-no shortcodes necessary for slotting
-
-slots first approach - deeply nested slots are easily accomplished. This is important for templating.
-props passing capable
-SSR + partial hydr readylugins
-
+its a vue only solutio
 ## Feature list to build
 
 - props seeker via attr
