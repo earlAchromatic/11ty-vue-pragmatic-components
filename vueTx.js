@@ -6,7 +6,7 @@ eleventyConfig.addTransform(
 
     function tryComponents() {
       for (const [key, value] of Object.entries(componentRegistry)) {
-        let comp = doc.querySelector(registeredComponent);
+        let comp = doc.querySelector(component);
         if (!comp) {
           return;
         }
@@ -16,15 +16,15 @@ eleventyConfig.addTransform(
         console.log(childTemplate);
 
         let VueWrapper = `
-      <div id="${registeredComponent}">
+      <div id="${component}">
       <script type=module>
       import {createApp} from "./node_modules/vue";
-      import ${registeredComponent} from "${registeredComponentPath}";
+      import ${component} from "${registeredComponentPath}";
       createApp({
-        name: ${registeredComponent},
+        name: ${component},
         data(){},
         template: \`${childTemplate}\`
-      }).mount('#${registeredComponent}')
+      }).mount('#${component}')
       <\/script>
       `;
         let el = doc.createElement('div');
