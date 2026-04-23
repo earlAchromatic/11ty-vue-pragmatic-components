@@ -8,7 +8,7 @@ private:
 
 public:
   MasterlistProvider() {
-    // Seed the provider with a small set of placeholder items.
+    // Initialize the provider with a short placeholder item list.
     masterlist = {"item1", "item2", "item3"};
   }
 
@@ -23,6 +23,7 @@ public:
   }
 
   void printMasterlist() const {
+    // Print each stored item on its own line.
     for (const auto& item : masterlist) {
       std::cout << item << std::endl;
     }
