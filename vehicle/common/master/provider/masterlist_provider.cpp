@@ -23,7 +23,7 @@ public:
   }
 
   void printMasterlist() const {
-    // Print each stored item on its own line.
+    // Emit each stored item on a separate output line.
     for (const auto& item : masterlist) {
       std::cout << item << std::endl;
     }
