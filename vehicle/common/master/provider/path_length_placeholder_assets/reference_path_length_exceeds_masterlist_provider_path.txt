@@ -1,0 +1,2 @@
+This placeholder file exists to provide a deliberately long repository path.
+It does not affect runtime behavior.
