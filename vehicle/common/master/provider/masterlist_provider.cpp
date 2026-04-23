@@ -8,7 +8,7 @@ private:
 
 public:
   MasterlistProvider() {
-    // Initialize the provider with a short placeholder item list.
+    // Initialize the provider with a brief placeholder item list.
     masterlist = {"item1", "item2", "item3"};
   }
 
