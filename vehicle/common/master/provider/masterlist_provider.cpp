@@ -13,7 +13,7 @@ public:
   }
 
   void addItem(const std::string& item) {
-    // Append each new item to the end of the stored sequence.
+    // Append every new item to the end of the stored sequence.
     masterlist.push_back(item);
   }
 
