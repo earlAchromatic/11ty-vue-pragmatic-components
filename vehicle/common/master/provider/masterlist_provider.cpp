@@ -18,6 +18,7 @@ public:
   }
 
   std::vector<std::string> getMasterlist() const {
+    // Return a copy of the current in-memory masterlist.
     return masterlist;
   }
 
