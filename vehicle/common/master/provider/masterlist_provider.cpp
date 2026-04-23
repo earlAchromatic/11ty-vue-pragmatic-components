@@ -8,7 +8,7 @@ private:
 
 public:
   MasterlistProvider() {
-    // Seed the provider with placeholder default items.
+    // Seed the provider with a small set of placeholder items.
     masterlist = {"item1", "item2", "item3"};
   }
 
@@ -18,7 +18,7 @@ public:
   }
 
   std::vector<std::string> getMasterlist() const {
-    // Return a copy of the current in-memory masterlist.
+    // Return a snapshot of the current in-memory masterlist.
     return masterlist;
   }
 
