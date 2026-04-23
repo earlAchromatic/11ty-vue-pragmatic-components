@@ -13,7 +13,7 @@ public:
   }
 
   void addItem(const std::string& item) {
-    // Preserve insertion order as items are added.
+    // Append new items to the end of the stored sequence.
     masterlist.push_back(item);
   }
 
